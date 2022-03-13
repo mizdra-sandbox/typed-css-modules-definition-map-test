@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "gen": "tlm src"
+    "gen:named": "tlm src",
+    "gen:default": "tlm --exportType default src"
   },
   "keywords": [],
   "author": "",

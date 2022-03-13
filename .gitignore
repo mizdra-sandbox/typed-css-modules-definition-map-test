@@ -133,3 +133,4 @@ dist
 .pnp.*
 
 *.module.less.d.ts
+*.module.less.d.ts.map

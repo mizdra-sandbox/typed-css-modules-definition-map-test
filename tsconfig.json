@@ -31,7 +31,8 @@
     "noUnusedParameters": true,
 
     /* Debug Options */
-    "sourceMap": true, // for ts-loader (ref: https://github.com/TypeStrong/ts-loader#devtool--sourcemaps)
+    // "sourceMap": true, // for ts-loader (ref: https://github.com/TypeStrong/ts-loader#devtool--sourcemaps)
+    "inlineSourceMap": true,
     "locale": "ja"
   }
 }

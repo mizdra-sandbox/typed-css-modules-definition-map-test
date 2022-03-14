@@ -4,13 +4,17 @@
   content: "basic";
 }
 
-.nesting {
-  content: "nesting";
-  .nesting_1 {
-    content: "nesting_1";
-  }
-  &_2 {
+.nesting_1 {
+  content: "nesting_1";
+  .nesting_2 {
     content: "nesting_2";
+  }
+}
+
+.parent_selector {
+  content: "parent_selector";
+  &_1 {
+    content: "parent_selector_1";
   }
 }
 
@@ -24,10 +28,10 @@
 
 .pseudo_class {
   content: "pseudo_class";
-  .pseudo_class:hover {
+  &:hover {
     content: "pseudo_class:hover";
   }
-  .pseudo_class:before {
+  &:before {
     content: "pseudo_class:before";
   }
 }

@@ -1,9 +1,10 @@
 import basicStyle from './less/basic.module.less';
 
 console.log(basicStyle.basic);
-console.log(basicStyle.nesting);
 console.log(basicStyle.nesting_1);
 console.log(basicStyle.nesting_2);
+console.log(basicStyle.parent_selector);
+console.log(basicStyle.parent_selector_1);
 console.log(basicStyle.cascading);
 console.log(basicStyle.pseudo_class);
 console.log(basicStyle.use_mixin);

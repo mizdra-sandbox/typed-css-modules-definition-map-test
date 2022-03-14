@@ -13,3 +13,4 @@ console.log(basicStyle.selector_list_1);
 console.log(basicStyle.selector_list_2);
 console.log(basicStyle.global_class_name_1);
 console.log(basicStyle.global_class_name_2);
+console.log(basicStyle.global_class_name_3);

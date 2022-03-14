@@ -1,5 +1,5 @@
-import basicStyle from './basic.module.less';
-import importStyle from './import.module.less';
+import basicStyle from './less/basic.module.less';
+import importStyle from './less/import.module.less';
 
 export const a = 1;
 export const b = 'text';

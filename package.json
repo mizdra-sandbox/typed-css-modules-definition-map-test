@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode development",
     "gen:named": "tlm src",
-    "gen:default": "tlm --exportType default src"
+    "gen:default": "tlm --exportType default --nameFormat none src"
   },
   "keywords": [],
   "author": "",

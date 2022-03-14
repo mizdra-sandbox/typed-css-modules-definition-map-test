@@ -1,16 +1,61 @@
-.some-styles {
-  color: red;
-  &:hover {
-    color: blue;
+@import './_mixin.less';
+
+.basic {
+  content: "basic";
+}
+
+.nesting {
+  content: "nesting";
+  .nesting_1 {
+    content: "nesting_1";
+  }
+  &_2 {
+    content: "nesting_2";
   }
 }
 
-.nested {
-  &-class {
-    background: green;
-  }
+.cascading {
+  content: "cascading_1";
+}
 
-  &-another {
-    border: 1px;
+.cascading {
+  content: "cascading_2";
+}
+
+.pseudo_class {
+  content: "pseudo_class";
+  .pseudo_class:hover {
+    content: "pseudo_class:hover";
+  }
+  .pseudo_class:before {
+    content: "pseudo_class:before";
+  }
+}
+
+.use_mixin {
+  content: "use_mixin";
+  .box_shadow();
+  .clearfix();
+}
+
+@supports (display: flex) {
+  @media screen and (min-width: 900px) {
+    .at_rule {
+      content: "at_rule";
+    }
+  }
+}
+
+.selector_list_1, .selector_list_2 {
+  content: "selector_list";
+}
+
+:global .global_class_name_1 {
+  content: "global_class_name_1";
+}
+
+:global {
+  .global_class_name_2 {
+    content: "global_class_name_2";
   }
 }

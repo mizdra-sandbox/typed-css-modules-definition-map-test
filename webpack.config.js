@@ -36,7 +36,10 @@ module.exports = (env, argv) => ({
               url: false,
             },
           },
-          "less-loader",
+          {
+            loader: 'postcss-loader'
+          }
+          // "less-loader",
         ],
       },
     ],

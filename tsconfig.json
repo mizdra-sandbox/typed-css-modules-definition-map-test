@@ -33,6 +33,21 @@
     /* Debug Options */
     // "sourceMap": true, // for ts-loader (ref: https://github.com/TypeStrong/ts-loader#devtool--sourcemaps)
     "inlineSourceMap": true,
-    "locale": "ja"
+    "locale": "ja",
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "postcssOptions": {
+            "useConfig": true
+          }
+          // "rendererOptions": {
+          //   "less": {
+          //     "sourceMap": {}
+          //   }
+          // }
+        }
+      }
+    ]
   }
 }

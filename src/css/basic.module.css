@@ -1,0 +1,60 @@
+.basic {
+  content: "basic";
+}
+
+.nesting_1 {
+  content: "nesting_1";
+  .nesting_2 {
+    content: "nesting_2";
+  }
+}
+
+.parent_selector {
+  content: "parent_selector";
+  &_1 {
+    content: "parent_selector_1";
+  }
+}
+
+.cascading {
+  content: "cascading_1";
+}
+
+.cascading {
+  content: "cascading_2";
+}
+
+.pseudo_class {
+  content: "pseudo_class";
+  &:hover {
+    content: "pseudo_class:hover";
+  }
+  &:before {
+    content: "pseudo_class:before";
+  }
+}
+
+@supports (display: flex) {
+  @media screen and (min-width: 900px) {
+    .at_rule {
+      content: "at_rule";
+    }
+  }
+}
+
+.selector_list_1, .selector_list_2 {
+  content: "selector_list";
+}
+
+:global .global_class_name_1 {
+  content: "global_class_name_1";
+}
+
+:global {
+  .global_class_name_2 {
+    content: "global_class_name_2";
+  }
+  .global_class_name_3 {
+    content: "global_class_name_3";
+  }
+}

@@ -29,7 +29,7 @@
     "style-loader": "^3.3.1",
     "ts-loader": "^9.2.8",
     "ts-node": "^10.7.0",
-    "typed-css-modules": "^0.7.0",
+    "typed-css-modules": "file:../../../github.com/mizdra/typed-css-modules",
     "typed-less-modules": "file:../../../github.com/mizdra/typed-less-modules",
     "typescript": "^4.6.2",
     "webpack": "^5.70.0",

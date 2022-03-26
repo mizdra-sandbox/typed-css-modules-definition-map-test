@@ -2,17 +2,20 @@ import DtsCreator from 'typed-css-modules';
 import { readFile } from 'fs/promises';
 import less from 'less';
 
-const path = 'src/less/basic.module.less';
-
 const creator = new DtsCreator();
 
-async function main() {
-  const lessText = await readFile(path, 'utf8');
-  const lessRenderOutput = await less.render(lessText, {
-    filename: path,
-    sourceMap: {},
-  });
-  const cssText = lessRenderOutput.css;
+async function gen(path: string, lang: 'css' | 'less') {
+  let cssText: string;
+  if (lang === 'css') {
+    cssText = await readFile(path, 'utf8');
+  } else {
+    const lessText = await readFile(path, 'utf8');
+    const lessRenderOutput = await less.render(lessText, {
+      filename: path,
+      sourceMap: {},
+    });
+    cssText = lessRenderOutput.css;
+  }
   console.log({ cssText });
 
   const dtsContent = await creator.create(path, cssText);
@@ -21,4 +24,5 @@ async function main() {
   dtsContent.writeFile(); // writes this content to "src/style.css.d.ts"
 }
 
-main();
+gen('src/css/basic.module.css', 'css');
+// gen('src/less/basic.module.less', 'less');

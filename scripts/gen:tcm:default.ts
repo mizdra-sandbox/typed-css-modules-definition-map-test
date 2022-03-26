@@ -2,12 +2,12 @@ import DtsCreator from 'typed-css-modules';
 import { readFile } from 'fs/promises';
 import less from 'less';
 
-const creator = new DtsCreator();
+const creator = new DtsCreator({ declarationMap: true });
 
 async function gen(path: string, lang: 'css' | 'less') {
-  let cssText: string;
+  let cssText: string | undefined;
   if (lang === 'css') {
-    cssText = await readFile(path, 'utf8');
+    // noop
   } else {
     const lessText = await readFile(path, 'utf8');
     const lessRenderOutput = await less.render(lessText, {

@@ -1,19 +1,7 @@
+@import './_imported.css';
+
 .basic {
   content: "basic";
-}
-
-.nesting_1 {
-  content: "nesting_1";
-  .nesting_2 {
-    content: "nesting_2";
-  }
-}
-
-.parent_selector {
-  content: "parent_selector";
-  &_1 {
-    content: "parent_selector_1";
-  }
 }
 
 .cascading {
@@ -26,12 +14,14 @@
 
 .pseudo_class {
   content: "pseudo_class";
-  &:hover {
-    content: "pseudo_class:hover";
-  }
-  &:before {
-    content: "pseudo_class:before";
-  }
+}
+
+.pseudo_class:hover {
+  content: "pseudo_class:hover";
+}
+
+.pseudo_class:before {
+  content: "pseudo_class:before";
 }
 
 @supports (display: flex) {

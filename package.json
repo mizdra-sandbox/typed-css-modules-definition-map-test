@@ -7,7 +7,7 @@
     "build": "webpack --mode development",
     "gen:tcm:default": "ts-node --files ./scripts/gen:tcm:default.ts",
     "gen:tlm:named": "tlm src",
-    "gen:tlm:default": "tlm --exportType default --nameFormat none src"
+    "gen:tlm:default": "tlm --exportType default --nameFormat none --declarationMap src"
   },
   "keywords": [],
   "author": "",

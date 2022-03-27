@@ -54,15 +54,19 @@
   content: "selector_list";
 }
 
-:global .global_class_name_1 {
-  content: "global_class_name_1";
+:local .local_class_name_1 {
+  content: "local_class_name_1";
 }
 
-:global {
-  .global_class_name_2 {
-    content: "global_class_name_2";
+:local {
+  .local_class_name_2 {
+    content: "local_class_name_2";
   }
-  .global_class_name_3 {
-    content: "global_class_name_3";
+  .local_class_name_3 {
+    content: "local_class_name_3";
   }
+}
+
+:local(.local_class_name_4) {
+  content: "local_class_name_4";
 }

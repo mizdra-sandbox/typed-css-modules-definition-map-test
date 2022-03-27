@@ -1,6 +1,6 @@
 #!/usr/bin/env -S ts-node --files
 
-import { run } from 'typed-css-modules';
+import { run } from '@mizdra/typed-css-modules';
 import { readFile } from 'fs/promises';
 import less from 'less';
 
